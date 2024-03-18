@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media & Video Player</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: rgb(68,83,99); /* Fallback for older browsers */
+            background: -moz-radial-gradient(circle, rgba(68,83,99,1) 0%, rgba(0,0,0,1) 100%); /* Firefox */
+            background: -webkit-radial-gradient(circle, rgba(68,83,99,1) 0%, rgba(0,0,0,1) 100%); /* Chrome, Safari */
+            background: radial-gradient(circle, rgba(68,83,99,1) 0%, rgba(0,0,0,1) 100%); /* Standard syntax */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#445363",endColorstr="#000000",GradientType=1); /* IE */
+            color: #fff; /* Text color set to white */
+            transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+        }
+
+        #videoPlayer {
+            display: none;
+            width: 50%;
+            height: auto;
+        }
+
+        #gifPlayer {
+            display: none;
+            max-width: 50%;
+            height: auto;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My accounts in social media</h1>
+    <div class="button-container">
+        <button onclick="openTwitter()">
+            <img src="file:///C:/Users/twd/OneDrive/Desktop/hrin/twitter.png" alt="Twitter" width="15" height="15"> Twitter
+        </button>
+        <br>
+        <button onclick="openInstagram()">
+            <img src="file:///C:/Users/twd/OneDrive/Desktop/hrin/instagram.png" alt="Instagram" width="15" height="15"> Instagram
+        </button>
+        <br>
+        <button onclick="openYouTube()">
+            <img src="file:///C:/Users/twd/OneDrive/Desktop/hrin/youtube.png" alt="YouTube" width="15" height="15"> YouTube
+        </button>
+    </div>
+
+    <h1>للتبرع بشيش كباب</h1>
+    <button onclick="openTips()">
+        <img src="https://kitchen.sayidaty.net/uploads/small/3a/3a2da5bc9be8b2ecb2d7c19fcf8cd9bb_w750_h500.jpg" alt="تبرع" width="15" height="15">
+    </button>
+
+    <button onclick="toggleVideo()">Don't Click on Me</button>
+    
+    <img id="gifPlayer" src="C:/Users/twd/OneDrive/Desktop/hrin/huh.gif" alt="Your GIF">
+
+    <script>
+        function openTwitter() {
+            window.open("https://twitter.com/jlml", "_blank");
+        }
+
+        function openInstagram() {
+            window.open("https://www.instagram.com/hirn/", "_blank");
+        }
+
+        function openYouTube() {
+            window.open("https://www.youtube.com/channel/UC47cAIXtNXJmWXhUow2EwEg", "_blank");
+        }
+
+        function openTips() {
+            window.open("https://tip.dokan.sa/j", "_blank");
+        }
+
+        function toggleVideo() {
+            var gif = document.getElementById("gifPlayer");
+            gif.style.display = (gif.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound Button</title>
+</head>
+<body>
+    <button onclick="playSound()">?</button>
+
+    <audio id="audio" src="C:\Users\twd\OneDrive\Desktop\hrin\jumpscare Audio.mp3"></audio>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
